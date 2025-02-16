@@ -11,10 +11,12 @@ print(data[0])
 print('----------------')
 print(data[10])
 
+
 sum_len = 0
 for d in data:
 	sum_len = sum_len + len(d)
 print('留言平均長度', sum_len/len(data))
+
 
 new = []
 for d in data:
@@ -24,9 +26,21 @@ print('一共有', len(new), '筆留言字母數小於100')
 print(new[0])
 print(new[1])
 
+
 amazing = []
 for d in data:
 	if 'amazing' in d:
 		amazing.append(d)
 print('一共有', len(amazing), '筆留言提到amazing')
 print(amazing[0])
+
+amazing = [d for d in data if 'amazing' in d] #清單快寫法
+print(amazing)
+
+#詢問bad有無在留言內，有就True 沒有就False
+bad = []
+for d in data:
+	bad.append('bad' in d)
+
+bad = ['bad' in d for d in data] #清單快寫法
+print(bad)
