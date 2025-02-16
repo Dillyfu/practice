@@ -11,3 +11,7 @@ print(data[0])
 print('----------------')
 print(data[10])
 
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+print('留言平均長度', sum_len/len(data))
