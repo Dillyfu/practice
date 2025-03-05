@@ -18,7 +18,6 @@ def read_file(filename): # 把檔名設為參數:filename，使用function函式
 
 # 轉換對話紀錄
 def convert(data):
-	new = []
 	person = None # 將 person 先設成無，以排除"當第一行不是人名時"，程式當掉風險
 	allen_word_count = 0 # 創造變數
 	allen_sticker_count = 0
@@ -52,7 +51,7 @@ def convert(data):
 
 
 		# print(s) # 先印出
-	return new # 將 轉換好的對話紀錄回傳出來
+	
 
 
 def write_file(filename, data): # 把要寫入檔案的東西放進，有檔名及要寫入的資訊
